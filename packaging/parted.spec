@@ -1,11 +1,7 @@
-#
-# Please submit bugfixes or comments via http://bugs.tizen.org/
-#
-
 %define _sbindir /sbin
 
 Name:           parted
-Version:        3.0
+Version:        3.1
 Release:        1
 License:        GPL-3.0+
 Summary:        The GNU disk partition manipulation program
@@ -50,9 +46,6 @@ make %{?_smp_mflags}
 %install
 %make_install
 
-# Remove components we do not ship
-rm -rf %{buildroot}%{_infodir}/dir
-
 %find_lang %{name}
 
 %post -p /sbin/ldconfig
@@ -66,7 +59,7 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING
+%license COPYING
 %{_sbindir}/parted
 %{_sbindir}/partprobe
 %{_libdir}/libparted*.so.*
