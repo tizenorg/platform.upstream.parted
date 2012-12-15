@@ -68,5 +68,6 @@ make %{?_smp_mflags}
 %defattr(-,root,root,-)
 %{_includedir}/parted
 %{_libdir}/libparted.so
+%{_libdir}/libparted-fs-resize.so
 %{_libdir}/pkgconfig/libparted.pc
 
