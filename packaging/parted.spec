@@ -9,6 +9,7 @@ Url:            http://www.gnu.org/software/parted
 Group:          Applications/System
 
 Source0:        ftp://ftp.gnu.org/gnu/%{name}/%{name}-%{version}.tar.gz
+Source1001: 	parted.manifest
 
 BuildRequires:  gettext-devel
 BuildRequires:  libtool
@@ -38,6 +39,7 @@ Parted library, you need to install this package.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-static --disable-device-mapper --with-readline --with-libdir=%{_libdir} --exec-prefix=/usr
@@ -58,6 +60,7 @@ make %{?_smp_mflags}
 %docs_package
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %license COPYING
 %{_sbindir}/parted
@@ -65,6 +68,7 @@ make %{?_smp_mflags}
 %{_libdir}/libparted*.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_includedir}/parted
 %{_libdir}/libparted.so
