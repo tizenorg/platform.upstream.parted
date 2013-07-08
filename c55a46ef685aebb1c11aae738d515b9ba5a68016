@@ -1,0 +1,8 @@
+Change-Id: Ic55a46ef685aebb1c11aae738d515b9ba5a68016
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:36:54 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5267
+Project: platform/upstream/parted
+Branch: refs/heads/tizen
